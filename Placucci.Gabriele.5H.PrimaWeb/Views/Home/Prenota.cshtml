@@ -1,0 +1,24 @@
+
+@model  Placucci.Gabriele._5H.PrimaWeb.Models.Prenotazione
+
+@{
+    ViewData["Title"] = "Prenota";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Prenota pure qui</h1>
+    <form class="m-2" method="POST" asp-action="Prenota">
+        <div class="form-grup">
+            <label asp-for="Nome">Il tuo nome:</label>
+            <input asp-for="Nome" class="form-control">
+        </div>
+        
+        <div class="form-grup">
+            <label asp-for="Email">La tua Email:</label>
+            <input asp-for="Email" class="form-control">
+        </div>
+        
+
+        <button type ="submit" class="btn btn-primary">Prenota</button>
+    </form> 
+</div>

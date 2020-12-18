@@ -1,0 +1,35 @@
+
+@model List<Prenotazione>
+
+@{
+
+    ViewData["Title"] = "Home Page";
+
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1>grazie per la prenotazione</h1>
+    <h2>ecco l'elenco delle persone prenotate: </h2>
+    
+    <table class="table table-bordered table-striped table-sm ">
+        <thead>
+            <tr>
+                <th>NOME</th>
+                <th>EMAIL</th>
+            </tr>        
+        </thead>
+        <tbody>
+            <!--model contiene tutto. p prende tutto quello che ce in model(per ogni prenotazione p in model ci aggiunge nomi e email)-->
+            @foreach (Prenotazione p  in Model)
+            {
+            <tr>
+                <td>@p.Nome</td>
+                <td>@p.Email</td>
+            </tr>  
+            }
+                  
+        </tbody>        
+    </table>
+</div>
